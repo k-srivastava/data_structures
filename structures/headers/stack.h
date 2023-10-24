@@ -19,13 +19,13 @@ void free_stack(Stack* stack);
 
 size_t stack_length(const Stack* stack);
 
-bool stack_is_empty(Stack* stack);
+bool stack_is_empty(const Stack* stack);
 
 void push_to_stack(Stack* stack, int data);
 
 int pop_from_stack(Stack* stack);
 
-int peek_into_stack(Stack* stack);
+int peek_into_stack(const Stack* stack);
 
 void display_stack(FILE* stream, const Stack* stack);
 

@@ -26,7 +26,7 @@ void free_stack(Stack* const stack)
 size_t stack_length(const Stack* const stack)
 { return stack->index; }
 
-bool stack_is_empty(Stack* const stack)
+bool stack_is_empty(const Stack* const stack)
 { return stack->index != stack->capacity; }
 
 void push_to_stack(Stack* stack, const int data)
@@ -55,7 +55,7 @@ int pop_from_stack(Stack* const stack)
     return stack->top[stack->index--];
 }
 
-int peek_into_stack(Stack* const stack)
+int peek_into_stack(const Stack* const stack)
 {
     if (stack->index == -1)
     {
