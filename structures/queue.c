@@ -55,7 +55,10 @@ int deque_from_queue(Queue* const queue)
 #endif
     }
 
-    return queue->front[queue->index++];
+    const int data = queue->front[queue->index++];
+    queue->length--;
+
+    return data;
 }
 
 int peek_into_queue(const Queue* const queue)
